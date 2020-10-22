@@ -54,13 +54,16 @@
 
 					<ul class="list-group t20">
 						{% for todolist in todo_items %}
-							{% if todolist.completed %}
+						    {% if todolist.completed %}
 							<li class="list-group-item todo-completed">{{todolist.text}}</li>
 							{% else %}
-							<a href="{% url 'completed' todolist.id %}"><li class="list-group-item ">{{todolist.text}}</li></a>
+							<a href="#"><li class="list-group-item">{{todolist.text}}</li></a>
 							{% endif %}
-						    {% endfor %}
-						
+							{% endfor %}
+							
+						<!--   <li class="list-group-item">Learn something new.</li>
+						       <li class="list-group-item todo-completed">Buy a new journal</li>
+						       <li class="list-group-item">Book a dentist appointment</li>		 -->			
 					</ul>
 				</div>
 			</div>
